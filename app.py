@@ -36,7 +36,7 @@ import io
 app = Flask(__name__)
 app.secret_key = 'your-secret-key-change-in-production'  # Make sure this is set
 
-# OTP Configuration
+# OTP Configuratio
 OTP_EXPIRY_MINUTES = 10
 OTP_LENGTH = 6
 
