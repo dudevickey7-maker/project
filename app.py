@@ -47,9 +47,9 @@ MYSQL_PASSWORD = 'YNLFYHPfhtFrgqZzOMwevwhOnKiDyLxJ'
 MYSQL_DB = 'railway'
 
 mysql = pymysql.connect(
-    host="mysql-cm74.railway.internal",
+    host="mysql.railway.internal",
     user="root",
-    password="YNLFYHPfhtFrgqZzOMwevwhOnKiDyLxJ",
+    password="PnxxVMVTvTuBgInMwIMWncpTsXFogcWG",
     database="railway"
 )
 
