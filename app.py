@@ -53,7 +53,7 @@ mysql = pymysql.connect(
     database="railway"
 )
 
-# Email Configuration
+# Email Configuratio
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USER = 'gamergopi26@gmail.com'  # Change this to your email
