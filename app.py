@@ -40,18 +40,17 @@ app.secret_key = 'your-secret-key-change-in-production'  # Make sure this is set
 OTP_EXPIRY_MINUTES = 10
 OTP_LENGTH = 6
 
-
 # Database Configuration
-MYSQL_HOST = 'localhost'
+MYSQL_HOST = 'mysql-cm74.railway.internal'
 MYSQL_USER = 'root'
-MYSQL_PASSWORD = 'root'
-MYSQL_DB = 'form_system_db'
+MYSQL_PASSWORD = 'YNLFYHPfhtFrgqZzOMwevwhOnKiDyLxJ'
+MYSQL_DB = 'railway'
 
 mysql = pymysql.connect(
-    host="localhost",
+    host="mysql-cm74.railway.internal",
     user="root",
-    password="root",
-    database="form_system_db"
+    password="YNLFYHPfhtFrgqZzOMwevwhOnKiDyLxJ",
+    database="railway"
 )
 
 # Email Configuration
@@ -10193,7 +10192,7 @@ def submit_for_review(form_id):
                     <p>Student: {session['name']} ({session['email']})</p>
                     <p>Submission Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                 </div>
-                <a href="https://localhost:5000/review-forms" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">Review Forms</a>
+                <a href="https://formmasterr.up.railway.app/review-forms" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">Review Forms</a>
                 <hr>
                 <p style="color: #666; font-size: 12px;">This is an automated message from FormMaster Pro.</p>
             </div>
@@ -10969,7 +10968,7 @@ def review_form_action(form_id):
                         <p>Approval Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                     </div>
                     <p>Your form is now published and available to other students.</p>
-                    <a href="https://localhost:5000/dashboard" style="display: inline-block; padding: 10px 20px; background: #10b981; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Dashboard</a>
+                    <a href="https://formmasterr.up.railway.app/dashboard" style="display: inline-block; padding: 10px 20px; background: #10b981; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Dashboard</a>
                     <hr>
                     <p style="color: #666; font-size: 12px;">This is an automated message from FormMaster Pro.</p>
                 </div>
@@ -10991,7 +10990,7 @@ def review_form_action(form_id):
                         <p>Review Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                     </div>
                     <p>You can edit and resubmit your form for review.</p>
-                    <a href="https://localhost:5000/my-submissions" style="display: inline-block; padding: 10px 20px; background: #ef4444; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Submissions</a>
+                    <a href="https://formmasterr.up.railway.app/my-submissions" style="display: inline-block; padding: 10px 20px; background: #ef4444; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Submissions</a>
                     <hr>
                     <p style="color: #666; font-size: 12px;">This is an automated message from FormMaster Pro.</p>
                 </div>
@@ -11436,7 +11435,7 @@ def assign_form(form_id):
                                 <p>Assignment Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                             </div>
                             <p>Please complete the form before the due date.</p>
-                            <a href="https://localhost:5000/dashboard" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Dashboard</a>
+                            <a href="https://formmasterr.up.railway.app/dashboard" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Dashboard</a>
                             <hr>
                             <p style="color: #666; font-size: 12px;">This is an automated message from FormMaster Pro.</p>
                         </div>
@@ -13401,7 +13400,7 @@ def request_form(form_id):
                     <p>Request Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                 </div>
                 <p>Please review and approve or reject this request.</p>
-                <a href="https://localhost:5000/form-requests" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">Review Requests</a>
+                <a href="https://formmasterr.up.railway.app/form-requests" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">Review Requests</a>
                 <hr>
                 <p style="color: #666; font-size: 12px;">This is an automated message from FormMaster Pro.</p>
             </div>
@@ -13670,7 +13669,7 @@ def handle_request(request_id, action):
                         <p>Approval Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                     </div>
                     <p>You can now access the form from your dashboard.</p>
-                    <a href="https://localhost:5000/dashboard" style="display: inline-block; padding: 10px 20px; background: #10b981; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Dashboard</a>
+                    <a href="https://formmasterr.up.railway.app/dashboard" style="display: inline-block; padding: 10px 20px; background: #10b981; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Dashboard</a>
                     <hr>
                     <p style="color: #666; font-size: 12px;">This is an automated message from FormMaster Pro.</p>
                 </div>
@@ -14519,7 +14518,7 @@ def handle_download_request(download_id, action):
                             <p>Approval Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                         </div>
                         <p>You can now download your response from your dashboard.</p>
-                        <a href="https://localhost:5000/my-responses/downloads" style="display: inline-block; padding: 10px 20px; background: #10b981; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">Download Now</a>
+                        <a href="https://formmasterr.up.railway.app/my-responses/downloads" style="display: inline-block; padding: 10px 20px; background: #10b981; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">Download Now</a>
                     </div>
                     '''
                     send_email(download['student_email'], 'Download Access Granted - FormMaster Pro', html_content)
@@ -16525,7 +16524,7 @@ def toggle_form_publish(form_id):
                         <p>Change Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
                     </div>
                     <p>{"The form is now visible to students who have access." if new_status else "The form is no longer visible to students."}</p>
-                    <a href="https://localhost:5000/form/{form_id}/edit" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Form</a>
+                    <a href="https://formmasterr.up.railway.app/form/{form_id}/edit" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin: 10px 0;">View Form</a>
                     <hr>
                     <p style="color: #666; font-size: 12px;">This is an automated message from FormMaster Pro.</p>
                 </div>
@@ -18527,14 +18526,13 @@ if __name__ == '__main__':
     init_db()
     
     print("Starting FormMaster Pro...")
-    print(f"Admin URL: https://localhost:5000/login")
+    print(f"Admin URL: https://formmasterr.up.railway.app/login")
     print(f"Admin Email: {ADMIN_EMAIL}")
     print(f"Admin Password: {ADMIN_PASSWORD}")
     print(f"Super Admin Email: {SUPER_ADMIN_EMAIL}")
     print(f"Super Admin Password: {SUPER_ADMIN_PASSWORD}")
     
     app.run(host='0.0.0.0', port=5000, debug=True)
-
 
 
 
